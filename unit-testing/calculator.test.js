@@ -36,40 +36,52 @@ test("Negativ durch negative Zahl ist größer als 0", () => {
   expect(result).toBeGreaterThan(0);
 });
 
-// Homework 04.03.2024
+// Homework 04.03.2024 + best practices 05.03.2024
 
 test("Subtraktion bei a und b positiv", () => {
-  const result = calculator.substract(10, 2);
+  const a = 10;
+  const b = 2;
+  const differenz = calculator.substract(a, b);
 
-  expect(result).toEqual(8);
+  expect(differenz).toEqual(8);
 });
 
 test("Subtraktion bei a oder b negativ", () => {
-  const result = calculator.substract(10, -2);
+  const a = 10;
+  const b = -2;
+  const differenz = calculator.substract(a, b);
 
-  expect(result).toEqual(12);
+  expect(differenz).toEqual(12);
 });
 
 test("Subtraktion bei a und b gleich 0", () => {
-  const result = calculator.substract(10, 0);
+  const a = 10;
+  const b = 0;
+  const differenz = calculator.substract(a, b);
 
-  expect(result).toEqual(10);
+  expect(differenz).toEqual(10);
 });
 
 test("Multiplikation bei a und b positiv", () => {
-  const result = calculator.multiply(10, 2);
+  const a = 10;
+  const b = 2;
+  const produkt = calculator.multiply(a, b);
 
-  expect(result).toEqual(20);
+  expect(produkt).toEqual(20);
 });
 
 test("Multiplikation bei a oder b negativ", () => {
-  const result = calculator.multiply(10, -2);
+  const a = 10;
+  const b = -2;
+  const produkt = calculator.multiply(a, b);
 
-  expect(result).toEqual(-20);
+  expect(produkt).toEqual(-20);
 });
 
 test("Multiplikation bei a oder b gleich 0", () => {
-  const result = calculator.multiply(10, 0);
+  const a = 10;
+  const b = 2;
+  const produkt = calculator.multiply(a, b);
 
-  expect(result).toEqual(0);
+  expect(produkt).toEqual(0);
 });
