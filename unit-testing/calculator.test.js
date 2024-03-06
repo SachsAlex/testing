@@ -80,7 +80,7 @@ test("Multiplikation bei a oder b negativ", () => {
 
 test("Multiplikation bei a oder b gleich 0", () => {
   const a = 10;
-  const b = 2;
+  const b = 0;
   const produkt = calculator.multiply(a, b);
 
   expect(produkt).toEqual(0);
