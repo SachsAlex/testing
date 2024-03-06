@@ -3,7 +3,7 @@
 try {
   meineLieblingsFunktion();
 } catch (error) {
-  console.log("Mistakes were made");
+  console.error("Mistakes were made", error);
 } finally {
   console.log("Fix your code");
 }
