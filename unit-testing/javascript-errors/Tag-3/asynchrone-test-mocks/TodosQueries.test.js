@@ -54,14 +54,14 @@ describe("Testing GET Functions of Todo Route", () => {
 
   test("Teste GET ByUserId Funktion", async () => {
     const myInput = {
-      data: { todo: returnedTodo1 },
+      data: { todos: [returnedTodo1] },
     };
 
     axios.get.mockResolvedValue(myInput);
 
-    const result = await TodosQueries.fetchTodoByUserId(1);
+    const result = await TodosQueries.fetchTodosByUserId(1);
 
-    expect(result).toEqual(myInput.data.todo);
+    expect(result).toEqual(myInput.data.todos);
     expect(axios.get).toHaveBeenCalledTimes(3);
     expect(axios.get).toHaveBeenCalledWith(
       "http://localhost:5050/v1/todos/byuserid",

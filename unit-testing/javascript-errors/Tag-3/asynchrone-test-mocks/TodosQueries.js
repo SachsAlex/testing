@@ -20,15 +20,15 @@ async function fetchTodoById(todoId) {
   return todo;
 }
 
-async function fetchTodoByUserId(userId) {
+async function fetchTodosByUserId(userId) {
   const result = await axios.get("http://localhost:5050/v1/todos/byuserid", {
     params: { userId },
   });
 
-  const todo = result.data.todo;
+  const todos = result.data.todos;
 
-  console.log("Mein Todo /byuserid", todo);
+  console.log("Mein Todo /byuserid", todos);
 
-  return todo;
+  return todos;
 }
-module.exports = { fetchAllTodos, fetchTodoById, fetchTodoByUserId };
+module.exports = { fetchAllTodos, fetchTodoById, fetchTodosByUserId };
