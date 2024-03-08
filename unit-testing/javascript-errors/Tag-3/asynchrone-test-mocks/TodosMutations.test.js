@@ -37,7 +37,7 @@ describe("Testing Mutation Functions of Todo Route", () => {
 
   test("Teste PUT Mark Funktion", async () => {
     const mockData = {
-      data: { todo: returnedTodo1 },
+      data: { updatedTodo: 6 },
     };
     axios.put.mockResolvedValue(mockData);
     const result = await TodosMutations.markTodo(6, false);
@@ -69,12 +69,11 @@ describe("Testing Mutation Functions of Todo Route", () => {
   test("Teste DELETE Delete Funktion", async () => {
     const mockData = {
       data: {
-        deletedTodosId: 1,
+        deletedTodosId: 6,
       },
     };
     axios.delete.mockResolvedValue(mockData);
     const result = await TodosMutations.deleteTodo(6);
-    console.log("Todo mit ID 6 " + result);
 
     expect(result).toEqual(mockData.data.deletedTodosId);
     expect(axios.delete).toHaveBeenCalledTimes(1);
