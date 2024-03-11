@@ -31,6 +31,8 @@ const Fragen = {
   ],
 };
 
+// expect Test mit expect!!! -> 11.03.2024
+
 describe("Testing isRightSolutionForQuestion", () => {
   // Abfrage ob Inhalt in question
   // Quiz.js Zeile 1
